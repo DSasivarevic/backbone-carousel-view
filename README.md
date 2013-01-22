@@ -1,2 +1,2 @@
-backbone-scrollable
+backbone-carousel-view
 ===================
