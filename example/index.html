@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Carousel View example</title>
+
+	<style>
+	/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+		#carouselMask {
+			position: relative;
+			width:250px;
+			height:200px;
+			border : 1px solid #000;
+			margin:0 auto;
+			z-index:2;
+			overflow: hidden;
+		}
+
+		#carouselScroller {
+			position: absolute;
+			top:0;
+			left:0;
+			width:9999em;
+			z-index:1;
+		}
+
+		#carouselScroller ul {
+			margin:0;
+			padding:0;
+		}
+
+		#carouselScroller li {
+			float:left;
+			width:50px;
+			height:200px;
+			display: block;
+			background:#ccc;
+			text-align:center;
+			color:#999;
+			-webkit-box-shadow:0 0 2px #000;
+		}
+	</style>
+
+	<script src="../vendor/jquery/jquery.js"></script>
+	<script src="../vendor/underscore/underscore.js"></script>
+	<script src="../vendor/backbone/backbone.js"></script>
+	
+
+	<script type="template" id="layout">
+		<h1>Carousel View Example</h1>
+		<div id="carousel"></div>
+	</script>
+
+	<script type="template" id="carouselWrapperlayout">
+		<div id="carouselWrapper">
+			<button>Prev</button><button>Next</button>
+			<div id="carouselMask">
+				<div id="carouselScroller"></div>
+			</div>
+		</div>
+	</script>
+
+	<script type="template" id="imageList">
+		<ul>
+			<li><a href="">Item 1 / INDEX 0</a></li>
+			<li><a href="">Item 2 / INDEX 1</a></li>
+			<li><a href="">Item 3 / INDEX 2</a></li>
+			<li><a href="">Item 4 / INDEX 3</a></li>
+			<li><a href="">Item 5 / INDEX 4</a></li>
+			<li><a href="">Item 6 / INDEX 5</a></li>
+			<li><a href="">Item 7 / INDEX 6</a></li>
+			<li><a href="">Item 8 / INDEX 7</a></li>
+			<li><a href="">Item 9 / INDEX 8</a></li>
+			<li><a href="">Item 10 / INDEX 9</a></li>
+			<li><a href="">Item 11 / INDEX 10</a></li>
+		</ul>
+	</script>
+	<script src="../lib/CarouselView.js"></script>
+	<script src="main.js"></script>
+
+</head>
+<body>
+	
+</body>
+</html>
