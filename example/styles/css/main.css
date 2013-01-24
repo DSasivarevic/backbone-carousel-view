@@ -1,6 +1,6 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
 */
 
 html, body, div, span, applet, object, iframe,
@@ -12,70 +12,53 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
+	border: 0;
+	font: inherit;
+	font-size: 100%;
 	margin: 0;
 	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section { display: block; }
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
 blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+
+#carouselMask {
+	border: 1px solid #000;
+	height: 200px;
+	overflow: hidden;
+	position: relative;
+	width: 250px;
+	z-index: 2;
 }
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+
+#carouselScroller {
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 9999em;
+	z-index: 1;
 }
-		#carouselMask {
-			position: relative;
-			width:250px;
-			height:200px;
-			border : 1px solid #000;
-			margin:0 auto;
-			z-index:2;
-			overflow: hidden;
-		}
 
-		#carouselScroller {
-			position: absolute;
-			top:0;
-			left:0;
-			width:9999em;
-			z-index:1;
-		}
+#carouselScroller ul { margin: 0; padding: 0; }
 
-		#carouselScroller ul {
-			margin:0;
-			padding:0;
-		}
-
-		#carouselScroller li {
-			float:left;
-			width:50px;
-			height:200px;
-			display: block;
-			background:#ccc;
-			text-align:center;
-			color:#999;
-			-webkit-box-shadow:0 0 2px #000;
-		}
+#carouselScroller li {
+	-webkit-box-shadow: 0 0 2px #000;
+	background: #ccc;
+	color: #999;
+	display: block;
+	float: left;
+	height: 200px;
+	text-align: center;
+	width: 50px;
+}

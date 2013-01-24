@@ -13,10 +13,10 @@ var AppView = Backbone.View.extend({
 $(function() {
 	var appView = new AppView();
 	var carouselView = new CarouselView({
-		currentIndex : 5,
+		currentIndex : 0,
 		itemsToScroll : 2,
 		pxToScroll : 50,
 		elementsToShow : 5,
-		totalElements : 11
+		totalElements : 21
 	});
 });
